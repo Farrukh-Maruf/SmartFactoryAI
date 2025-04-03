@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Task Analysis Visualization</title>
+    <style>
+      body {
+        background-color: #1e1e1e;
+        color: #f0f0f0;
+        padding: 0;
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      }
+
+      .container-fluid {
+        padding: 10px;
+        max-width: 100%;
+      }
+
+      header {
+        background-color: #2d2d2d;
+        padding: 10px 0;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #444;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+        margin: 0;
+        color: #fff;
+        text-align: center;
+      }
+
+      /* Main dashboard layout */
+      .dashboard-container {
+        display: flex;
+        height: calc(100vh - 100px);
+        gap: 10px;
+      }
+
+      /* Camera grid layout */
+      .camera-grid {
+        display: grid;
+        /* grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr); */
+        gap: 10px;
+        flex: 1;
+      }
+
+      .camera-panel {
+        background-color: #2d2d2d;
+        border-radius: 5px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        width:1030px;
+        height:430px;
+      }
+
+      .camera-header {
+        background-color: #343a40;
+        padding: 8px 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .camera-header h5 {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      /* Content area with camera feed and right section */
+      .panel-content {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        overflow: hidden;
+      }
+
+      .camera-feed {
+        background-color: #000;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%; /* Adjusted to make space for the right section */
+      }
+
+      /* Right section containing logs and results */
+      .right-section {
+        display: flex;
+        flex-direction: column;
+        width: 40%; /* Takes up the remaining space */
+        overflow: hidden;
+      }
+
+      /* Logs and Results inside each panel */
+      .logs-panel,
+      .results-panel {
+        background-color: #2d2d2d;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .logs-panel {
+        flex: 1;
+        max-height: 60%; /* Adjusted to fit within the right section */
+      }
+
+      .results-panel {
+        flex: 1;
+        max-height: 40%; /* Adjusted to fit within the right section */
+      }
+
+      .panel-header {
+        background-color: #343a40;
+        padding: 8px 12px;
+      }
+
+      .panel-header h5 {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      .logs-content {
+        flex: 1;
+        overflow-y: auto;
+        padding: 10px;
+        font-family: monospace;
+        font-size: 0.9rem;
+        background-color: #1a1a1a;
+      }
+
+      .log-entry {
+        padding: 4px 0;
+        border-bottom: 1px solid #333;
+        color: #aaa;
+      }
+      .log-entry.info {
+        color: #4dabf7;
+      }
+      .log-entry.error {
+        color: #ff6b6b;
+      }
+      .log-entry.warning {
+        color: #ffd43b;
+      }
+
+      .log-entry1 {
+        padding: 4px 0;
+        border-bottom: 1px solid #333;
+        color: #aaa;
+      }
+      .log-entry1.info {
+        color: #4dabf7;
+      }
+      .log-entry1.error {
+        color: #ff6b6b;
+      }
+      .log-entry1.warning {
+        color: #ffd43b;
+      }
+
+      .log-entry2 {
+        padding: 4px 0;
+        border-bottom: 1px solid #333;
+        color: #aaa;
+      }
+      .log-entry2.info {
+        color: #4dabf7;
+      }
+      .log-entry2.error {
+        color: #ff6b6b;
+      }
+      .log-entry2.warning {
+        color: #ffd43b;
+      }
+
+      .log-entry3 {
+        padding: 4px 0;
+        border-bottom: 1px solid #333;
+        color: #aaa;
+      }
+      .log-entry3.info {
+        color: #4dabf7;
+      }
+      .log-entry3.error {
+        color: #ff6b6b;
+      }
+      .log-entry3.warning {
+        color: #ffd43b;
+      }
+
+      .results-content {
+        flex: 1;
+        overflow-y: auto;
+        padding: 10px;
+      }
+
+      .task-result {
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: #1a1a1a;
+        border-radius: 4px;
+        border-left: 4px solid #555;
+      }
+
+      .task-result:last-child {
+        margin-bottom: 0;
+      }
+
+      .result-detail {
+        margin-top: 5px;
+        font-size: 0.85rem;
+        color: #bbb;
+      }
+
+      /* Status badges */
+      .task-status {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.5rem;
+        border-radius: 3px;
+      }
+
+      .task-status.IDLE {
+        background-color: #6c757d;
+      }
+
+      .task-status.RUNNING {
+        background-color: #0d6efd;
+      }
+
+      .task-status.COMPLETED {
+        background-color: #198754;
+      }
+
+      .task-status.ERROR {
+        background-color: #dc3545;
+      }
+
+      /* Result styling */
+      .result-value.OK {
+        color: #20c997;
+        font-weight: bold;
+      }
+
+      .result-value.NG,
+      .result-value.ERROR {
+        color: #ff6b6b;
+        font-weight: bold;
+      }
+
+      /* Media elements */
+      .media-placeholder {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        color: #555;
+        font-style: italic;
+      }
+
+      .camera-feed img,
+      .camera-feed video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .timestamp {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        padding: 3px 8px;
+        border-radius: 3px;
+        font-size: 0.8rem;
+      }
+
+      /* Responsive design for smaller screens */
+      @media (max-width: 900px) {
+        .dashboard-container {
+          flex-direction: column;
+        }
+
+        .panel-content {
+          flex-direction: column;
+        }
+
+        .camera-feed {
+          width: 60%;
+          height: 100%;
+        }
+
+        .right-section {
+          width: 40%;
+          height: 100%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .camera-grid {
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(4, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="dashboard-container">
+        <!-- Camera grid -->
+        <!-- <div class="camera-grid"> -->
+
+
+          <!-- CASE Panel -->
+          <div style="display:none" class="camera-panel" id="case-panel">
+            <div class="camera-header">
+              <h5>CASE Task</h5>
+              <span class="badge task-status" id="case-status">IDLE</span>
+            </div>
+            <div class="panel-content">
+              <div class="camera-feed">
+                <div class="media-placeholder">No data available</div>
+              </div>
+              <div class="right-section">
+                <div class="logs-panel">
+                  <div class="panel-header">
+                    <h5>System Logs</h5>
+                  </div>
+                  <div class="logs-content" id="system-logs">
+                    <div class="log-entry">System initialized</div>
+                  </div>
+                </div>
+                <div class="results-panel">
+                  <div class="panel-header">
+                    <h5>Task Results</h5>
+                  </div>
+                  <div class="results-content">
+                    <div class="task-result" id="case-result">
+                      <strong>CASE:</strong>
+                      <span class="result-value">-</span>
+                      <div class="result-detail">
+                        <span class="confidence-label">Confidence:</span>
+                        <span class="confidence-value">-</span>
+                      </div>
+                      <div class="result-detail">
+                        <span class="details-label">Details:</span>
+                        <span class="details-value">-</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BOX Panel -->
+          <div style="display:none" class="camera-panel" id="box-panel">
+            <div class="camera-header">
+              <h5>BOX Task</h5>
+              <span class="badge task-status" id="box-status">IDLE</span>
+            </div>
+            <div class="panel-content">
+              <div class="camera-feed">
+                <div class="media-placeholder">No data available</div>
+              </div>
+              <div class="right-section">
+                <div class="logs-panel">
+                  <div class="panel-header">
+                    <h5>System Logs</h5>
+                  </div>
+                  <div class="logs-content" id="system-logs1">
+                    <div class="log-entry1">System initialized</div>
+                  </div>
+                </div>
+                <div class="results-panel">
+                  <div class="panel-header">
+                    <h5>Task Results</h5>
+                  </div>
+                  <div class="results-content">
+                    <div class="task-result" id="box-result">
+                      <strong>BOX:</strong>
+                      <span class="result-value">-</span>
+                      <div class="result-detail">
+                        <span class="confidence-label">Confidence:</span>
+                        <span class="confidence-value">-</span>
+                      </div>
+                      <div class="result-detail">
+                        <span class="details-label">Details:</span>
+                        <span class="details-value">-</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COVER Panel -->
+          <div style="display:none" class="camera-panel" id="cover-panel">
+            <div class="camera-header">
+              <h5>COVER Task</h5>
+              <span class="badge task-status" id="cover-status">IDLE</span>
+            </div>
+            <div class="panel-content">
+              <div class="camera-feed">
+                <div class="media-placeholder">No data available</div>
+              </div>
+              <div class="right-section">
+                <div class="logs-panel">
+                  <div class="panel-header">
+                    <h5>System Logs</h5>
+                  </div>
+                  <div class="logs-content" id="system-logs2">
+                    <div class="log-entry2">System initialized</div>
+                  </div>
+                </div>
+                <div class="results-panel">
+                  <div class="panel-header">
+                    <h5>Task Results</h5>
+                  </div>
+                  <div class="results-content">
+                    <div class="task-result" id="cover-result">
+                      <strong>COVER:</strong>
+                      <span class="result-value">-</span>
+                      <div class="result-detail">
+                        <span class="confidence-label">Confidence:</span>
+                        <span class="confidence-value">-</span>
+                      </div>
+                      <div class="result-detail">
+                        <span class="details-label">Details:</span>
+                        <span class="details-value">-</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FINAL Panel (replacing FORDING panel) -->
+          <div class="camera-panel" id="final-panel">
+            <div class="camera-header">
+              <h5>Final Task</h5>
+                <span class="badge task-status" id="final-status">IDLE</span>
+              </div>
+              <div class="panel-content">
+                <div class="camera-feed">
+                  <div class="media-placeholder">No data available</div>
+                </div>
+              <div class="right-section">
+                <div class="logs-panel">
+                  <div class="panel-header">
+                    <h5>System Logs</h5>
+                  </div>
+                  <div class="logs-content" id="system-logs3">
+                  <div class="log-entry3">System initialized</div>
+                    </div>
+                  </div>
+                  <div class="results-panel">
+                    <div class="panel-header">
+                      <h5>Task Results</h5>
+                    </div>
+                    <div class="results-content">
+                    <div class="task-result" id="final-result">
+                      <strong>FINAL:</strong>
+                      <span class="result-value">-</span>
+                      <div class="result-detail">
+                        <span class="confidence-label">Confidence:</span>
+                        <span class="confidence-value">-</span>
+                      </div>
+                      <div class="result-detail">
+                        <span class="details-label">Details:</span>
+                        <span class="details-value">-</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- </div> -->
+  </div>
+    <script>
+      // JavaScript remains unchanged as per your request
+      document.addEventListener("DOMContentLoaded", function () {
+        initializeVisualization();
+        initializeVisualization1();
+        initializeVisualization2();
+        initializeVisualization3();
+        setInterval(refreshVisualization, 2000);
+        setInterval(refreshVisualization1, 2000);
+        setInterval(refreshVisualization2, 2000);
+        setInterval(refreshVisualization3, 2000);
+      });
+
+      const taskTypes = ["CASE", "BOX", "COVER", "FORDING"];
+
+      const logLevels = {
+        INFO: "info",
+        WARNING: "warning",
+        ERROR: "error",
+      };
+
+      function initializeVisualization() {
+        console.log("Initializing visualization...");
+        addLogEntry("System initialized", logLevels.INFO, '');
+        addLogEntry("Connecting to data sources...", logLevels.INFO, '');
+        refreshVisualization();
+      }
+
+      function initializeVisualization1() {
+        console.log("Initializing visualization...");
+        addLogEntry("System initialized", logLevels.INFO, '1');
+        addLogEntry("Connecting to data sources...", logLevels.INFO, '1');
+        refreshVisualization1();
+      }
+
+      function initializeVisualization2() {
+        console.log("Initializing visualization...");
+        addLogEntry("System initialized", logLevels.INFO, '2');
+        addLogEntry("Connecting to data sources...", logLevels.INFO, '2');
+        refreshVisualization2();
+      }
+
+      function initializeVisualization3() {
+        console.log("Initializing visualization...");
+        addLogEntry("System initialized", logLevels.INFO, '3');
+        addLogEntry("Connecting to data sources...", logLevels.INFO, '3');
+        refreshVisualization3();
+      }
+
+      function refreshVisualization() {
+        server = '';
+        fetch("/api/last_files")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            updateCameraFeeds(data, server);
+            updateResultsPanel(data, server);
+            addLogEntry("Visualization refreshed", logLevels.INFO, server);
+          })
+          .catch((error) => {
+            console.error("Error fetching visualization data:", error);
+            addLogEntry("Failed to fetch data: " + error.message, logLevels.ERROR, server);
+            fallbackSimulation(server);
+          });
+
+        fetch("/api/task_statuses")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            updateTaskStatuses(data, 0);
+          })
+          .catch((error) => {
+            console.error("Error fetching task statuses:", error);
+            addLogEntry("Failed to fetch task statuses: " + error.message, logLevels.ERROR, server);
+          });
+
+        fetch("/api/system_logs")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((logs) => {
+            updateSystemLogs(logs, 0);
+          })
+          .catch((error) => {
+            console.error("Error fetching system logs:", error);
+          });
+      }
+
+      // 101 server conn
+      function refreshVisualization1() {
+        server = '1';
+        fetch("/api/last_files")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            updateCameraFeeds(data, server);
+            updateResultsPanel(data, server);
+            addLogEntry("Visualization refreshed", logLevels.INFO, server);
+          })
+          .catch((error) => {
+            console.error("Error fetching visualization data:", error);
+            addLogEntry("Failed to fetch data: " + error.message, logLevels.ERROR, server);
+            fallbackSimulation(server);
+          });
+
+        fetch("/api/task_statuses")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            updateTaskStatuses(data, 1);
+          })
+          .catch((error) => {
+            console.error("Error fetching task statuses:", error);
+            addLogEntry("Failed to fetch task statuses: " + error.message, logLevels.ERROR, server);
+          });
+
+        fetch("/api/system_logs")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((logs) => {
+            updateSystemLogs(logs, 1);
+          })
+          .catch((error) => {
+            console.error("Error fetching system logs:", error);
+          });
+      }
+
+      // 102 server conn
+      function refreshVisualization2() {
+        server = '2';
+        fetch("/api/last_files")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            updateCameraFeeds(data, server);
+            updateResultsPanel(data, server);
+            addLogEntry("Visualization refreshed", logLevels.INFO, server);
+          })
+          .catch((error) => {
+            console.error("Error fetching visualization data:", error);
+            addLogEntry("Failed to fetch data: " + error.message, logLevels.ERROR, server);
+            fallbackSimulation(server);
+          });
+
+        fetch("api/task_statuses")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            updateTaskStatuses(data, 2);
+          })
+          .catch((error) => {
+            console.error("Error fetching task statuses:", error);
+            addLogEntry("Failed to fetch task statuses: " + error.message, logLevels.ERROR, server);
+          });
+
+        fetch("/api/system_logs")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((logs) => {
+            updateSystemLogs(logs, 2);
+          })
+          .catch((error) => {
+            console.error("Error fetching system logs:", error);
+          });
+      }
+
+      // 103 server conn
+      function refreshVisualization3() {
+        server = '3';
+        fetch("/api/last_files")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            updateCameraFeeds(data, server);
+            updateResultsPanel(data, server);
+            addLogEntry("Visualization refreshed", logLevels.INFO, server);
+          })
+          .catch((error) => {
+            console.error("Error fetching visualization data:", error);
+            addLogEntry("Failed to fetch data: " + error.message, logLevels.ERROR, server);
+            fallbackSimulation(server);
+          });
+
+        fetch("/api/task_statuses")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            updateTaskStatuses(data, 3);
+          })
+          .catch((error) => {
+            console.error("Error fetching task statuses:", error);
+            addLogEntry("Failed to fetch task statuses: " + error.message, logLevels.ERROR, server);
+          });
+
+        fetch("/api/system_logs")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((logs) => {
+            updateSystemLogs(logs, 3);
+          })
+          .catch((error) => {
+            console.error("Error fetching system logs:", error);
+          });
+      }
+
+      function updateCameraFeeds(data, server) {
+        for (const taskType of taskTypes) {
+          updateCameraFeed(taskType.toLowerCase(), data[taskType], server);
+        }
+      }
+
+      function updateCameraFeed(taskId, fileData, server) {
+        if( server == '')
+        {
+          svr = '';
+        }else if ( server == '1' )
+        {
+          svr = '';
+        }else if ( server == '2' )
+        {
+          svr = '';
+        }else if ( server = '3' )
+        {
+          svr = '';
+        }
+
+        const panel = document.getElementById(`${taskId}-panel`);
+        if (!panel) return;
+
+        const cameraFeed = panel.querySelector(".camera-feed");
+        cameraFeed.innerHTML = "";
+
+        if (!fileData || !fileData.path) {
+          cameraFeed.innerHTML = '<div class="media-placeholder">No data available</div>';
+          return;
+        }
+
+        const timestamp = document.createElement("div");
+        timestamp.className = "timestamp";
+        timestamp.textContent = fileData.timestamp || "Unknown time";
+
+        const filePath = fileData.path;
+        const fileName = filePath.split("/").pop();
+        const fileExtension = fileName.split(".").pop().toLowerCase();
+
+        if (["jpg", "jpeg", "png", "gif"].includes(fileExtension)) {
+          const img = document.createElement("img");
+          img.src = svr+`/media/${fileName}`;
+          img.alt = `${taskId} task result`;
+          cameraFeed.appendChild(img);
+          addLogEntry(`Loaded image for ${taskId}: ${fileName}`, logLevels.INFO, server);
+        } else if (["mp4", "avi", "webm"].includes(fileExtension)) {
+          const video = document.createElement("video");
+          video.src = svr+`/media/${fileName}`;
+          video.controls = true;
+          video.loop = true;
+          video.muted = true;
+          video.autoplay = true;
+          cameraFeed.appendChild(video);
+          addLogEntry(`Loaded video for ${taskId}: ${fileName}`, logLevels.INFO, server);
+        } else {
+          cameraFeed.innerHTML = '<div class="media-placeholder">Unsupported file format</div>';
+          addLogEntry(`Unsupported file format for ${taskId}: ${fileName}`, logLevels.WARNING, server);
+        }
+
+        cameraFeed.appendChild(timestamp);
+      }
+
+      function updateResultsPanel(data, server) {
+        for (const taskType of taskTypes) {
+          const taskId = taskType.toLowerCase();
+          const fileData = data[taskType];
+          const resultPanel = document.getElementById(`${taskId}-result`);
+
+          if (!resultPanel) continue;
+
+          const resultValue = resultPanel.querySelector(".result-value");
+          const confidenceValue = resultPanel.querySelector(".confidence-value");
+          const detailsValue = resultPanel.querySelector(".details-value");
+
+          if (!fileData) {
+            resultValue.textContent = "-";
+            resultValue.className = "result-value";
+            confidenceValue.textContent = "-";
+            detailsValue.textContent = "-";
+            continue;
+          }
+
+          resultValue.textContent = fileData.status || "-";
+          resultValue.className = `result-value ${fileData.status}`;
+          confidenceValue.textContent = fileData.confidence || "-";
+          detailsValue.textContent = fileData.details || "-";
+
+          if (fileData.status === "ERROR") {
+            addLogEntry(`${taskType} task reported an error: ${fileData.details}`, logLevels.ERROR, server);
+          } else if (fileData.status === "OK") {
+            addLogEntry(`${taskType} task completed successfully`, logLevels.INFO, server);
+          }
+        }
+      }
+
+      function updateTaskStatuses(statusData, server) {
+        const statusBadges = {
+          "case-status": document.getElementById("case-status"),
+          "box-status": document.getElementById("box-status"),
+          "cover-status": document.getElementById("cover-status"),
+          "fording-status": document.getElementById("fording-status"),
+        };
+
+        for (const [taskType, status] of Object.entries(statusData)) {
+          const badgeId = `${taskType.toLowerCase()}-status`;
+          const badge = statusBadges[badgeId];
+
+          if (badge) {
+            badge.textContent = status;
+            badge.className = `badge task-status ${status}`;
+
+            if (status === "RUNNING" && badge.getAttribute("data-previous") !== "RUNNING") {
+              addLogEntry(`${taskType} task started running`, logLevels.INFO, server);
+            } else if (status === "ERROR" && badge.getAttribute("data-previous") !== "ERROR") {
+              addLogEntry(`${taskType} task encountered an error`, logLevels.ERROR, server);
+            }
+
+            badge.setAttribute("data-previous", status);
+          }
+        }
+      }
+
+      function updateSystemLogs(logs, server) {
+        if (!Array.isArray(logs) || logs.length === 0) return;
+
+        const existingEntries = new Set();
+        const existingEntries1 = new Set();
+        const existingEntries2 = new Set();
+        const existingEntries3 = new Set();
+        document.querySelectorAll(".log-entry").forEach((entry) => {
+          existingEntries.add(entry.getAttribute("data-log-id"));
+        });
+        document.querySelectorAll(".log-entry1").forEach((entry) => {
+          existingEntries1.add(entry.getAttribute("data-log-id"));
+        });
+        document.querySelectorAll(".log-entry2").forEach((entry) => {
+          existingEntries2.add(entry.getAttribute("data-log-id"));
+        });
+        document.querySelectorAll(".log-entry3").forEach((entry) => {
+          existingEntries3.add(entry.getAttribute("data-log-id"));
+        });
+
+        logs.forEach((log) => {
+          if (log.id && existingEntries.has(log.id)) return;
+
+          const level = log.level ? log.level.toLowerCase() : "";
+          addLogEntry(log.message, logLevels[level.toUpperCase()] || "", log.timestamp, log.id, server);
+        });
+      }
+
+      function addLogEntry(message, level = "", timestamp = null, logId = null, server) {
+        const logsPanel = document.getElementById("system-logs");
+        const logsPanel1 = document.getElementById("system-logs1");
+        const logsPanel2 = document.getElementById("system-logs2");
+        const logsPanel3 = document.getElementById("system-logs3");
+        
+        if (!logsPanel) return;
+        if (!logsPanel1) return;
+        if (!logsPanel2) return;
+        if (!logsPanel3) return;
+        const entry = document.createElement("div");
+        const entry1 = document.createElement("div");
+        const entry2 = document.createElement("div");
+        const entry3 = document.createElement("div");
+        entry.className = `log-entry ${level}`;
+        entry1.className = `log-entry1 ${level}`;
+        entry2.className = `log-entry2 ${level}`;
+        entry3.className = `log-entry3 ${level}`;
+
+        if (logId) {
+          entry.setAttribute("data-log-id", logId);
+          entry1.setAttribute("data-log-id", logId);
+          entry2.setAttribute("data-log-id", logId);
+          entry3.setAttribute("data-log-id", logId);
+        }
+        
+        let timeString;
+        if (timestamp) {
+          timeString = formatDateTime(timestamp);
+        } else {
+          const now = new Date();
+          timeString = `${now.getHours().toString().padStart(2, "0")}:${now
+            .getMinutes()
+            .toString()
+            .padStart(2, "0")}:${now.getSeconds().toString().padStart(2, "0")}`;
+        }
+
+        
+        entry.textContent = `[${timeString}] ${message}`;
+        entry1.textContent = `[${timeString}] ${message}`;
+        entry2.textContent = `[${timeString}] ${message}`;
+        entry3.textContent = `[${timeString}] ${message}`;
+        logsPanel.prepend(entry);
+        logsPanel1.prepend(entry1);
+        logsPanel2.prepend(entry2);
+        logsPanel3.prepend(entry3);
+
+        const logEntries = logsPanel.querySelectorAll(".log-entry");
+        const logEntries1 = logsPanel1.querySelectorAll(".log-entry1");
+        const logEntries2 = logsPanel2.querySelectorAll(".log-entry2");
+        const logEntries3 = logsPanel3.querySelectorAll(".log-entry3");
+        if (logEntries.length > 100) {
+          logsPanel.removeChild(logEntries[logEntries.length - 1]);
+        }
+        if (logEntries1.length > 100) {
+          logsPanel1.removeChild(logEntries1[logEntries1.length - 1]);
+        }
+        if (logEntries2.length > 100) {
+          logsPanel2.removeChild(logEntries2[logEntries2.length - 1]);
+        }
+        if (logEntries3.length > 100) {
+          logsPanel3.removeChild(logEntries3[logEntries3.length - 1]);
+        }
+      }
+
+      function formatDateTime(dateTimeString) {
+        if (!dateTimeString) return "Unknown";
+
+        const date = new Date(dateTimeString);
+        if (isNaN(date.getTime())) return dateTimeString;
+
+        return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+      }
+
+      function fallbackSimulation(server) {
+        console.warn("Using fallback simulation as API is not available");
+        addLogEntry("API not available, using simulation mode", logLevels.WARNING, server);
+
+        const now = new Date();
+        const timestamp = now.toISOString();
+
+        const simulatedData = {};
+        const simulatedStatuses = {};
+
+        for (const taskType of taskTypes) {
+          const hasData = Math.random() > 0.2;
+
+          if (hasData) {
+            const statuses = ["IDLE", "RUNNING", "COMPLETED", "ERROR"];
+            const status = statuses[Math.floor(Math.random() * statuses.length)];
+            simulatedStatuses[taskType] = status;
+
+            simulatedData[taskType] = {
+              path: `${taskType.toLowerCase()}_frame_${Math.floor(Math.random() * 1000)}.jpg`,
+              timestamp: formatDateTime(timestamp),
+              status: status === "COMPLETED" ? "OK" : status === "ERROR" ? "ERROR" : "-",
+              confidence: status === "COMPLETED" ? `${(80 + Math.random() * 19.9).toFixed(1)}%` : "-",
+              details:
+                status === "COMPLETED"
+                  ? "Task completed successfully"
+                  : status === "ERROR"
+                  ? "Device not responding"
+                  : status === "RUNNING"
+                  ? "Processing..."
+                  : "-",
+            };
+          } else {
+            simulatedData[taskType] = null;
+            simulatedStatuses[taskType] = "IDLE";
+          }
+        }
+
+        updateCameraFeeds(simulatedData);
+        updateResultsPanel(simulatedData);
+
+        const statusBadges = {
+          "case-status": document.getElementById("case-status"),
+          "box-status": document.getElementById("box-status"),
+          "cover-status": document.getElementById("cover-status"),
+          "fording-status": document.getElementById("fording-status"),
+        };
+
+        for (const [taskType, status] of Object.entries(simulatedStatuses)) {
+          const badge = statusBadges[`${taskType.toLowerCase()}-status`];
+          if (badge) {
+            badge.textContent = status;
+            badge.className = `badge task-status ${status}`;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

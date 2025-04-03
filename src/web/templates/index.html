@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>iframe 레이아웃</title>
+  <style>
+    body {
+      background-color: #1e1e1e;
+      color: #f0f0f0;
+      padding: 0;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    header {
+      background-color: #2d2d2d;
+      padding: 10px 0;
+      margin-bottom: 2px;
+      border-bottom: 1px solid #444;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+    }
+    table {
+      width: 100%;
+      height: calc(100vh - 90px); /* 헤더 높이 고려, 필요시 조정 */
+      table-layout: fixed;
+      border-collapse: collapse;
+    }
+    td {
+      padding: 0;
+      margin: 0;
+      border: 0px solid white; /* 각 셀에 동일한 외곽선 부여 */
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AI Task Analysis Visualization</h1>
+  </header>
+  <table>
+    <tr>
+      <td>
+        <iframe id="case" src="http://192.168.1.100:8080/fCase" scrolling="no"></iframe>
+      </td>
+      <td>
+        <iframe id="box" src="http://192.168.1.101:8080/fBox" scrolling="no"></iframe>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <iframe id="cover" src="http://192.168.1.102:8080/fCover" scrolling="no"></iframe>
+      </td>
+      <td>
+        <iframe id="final" src="http://192.168.1.103:8080/fFinal" scrolling="no"></iframe>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
