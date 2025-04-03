@@ -1,0 +1,194 @@
+{
+    "ORDER_NO": "250328610887",
+    "ITEM_CD": "ITM001",
+    "ITEM_NM": "(BIG)NSU Bio Syrup",
+    "ITEM_CLASS": "PROD",
+    "ORDER_QTY": 10.0,
+    "BOM": [
+        {
+            "ITEM_CD": "ITM501",
+            "ITEM_NM": "PE foam cushion RED",
+            "ITEM_CLASS": "SUB",
+            "PLC_CD": "0"
+        },
+        {
+            "ITEM_CD": "ITM701",
+            "ITEM_NM": "BIG BOX",
+            "ITEM_CLASS": "BOX",
+            "PLC_CD": "0"
+        },
+        {
+            "ITEM_CD": "ITM901",
+            "ITEM_NM": "A",
+            "ITEM_CLASS": null,
+            "PLC_CD": "2"
+        }
+    ],
+    "RECIPE": [
+        {
+            "RECIPE_CD": "R100",
+            "RECIPE_NM": "\ubb34\uac8c \uac80\uc0ac \ucd5c\uc18c\uac12",
+            "RECIPE_VALUE": 159.0,
+            "LOWER_LIMIT": 0.0,
+            "UPPER_LIMIT": 0.0
+        },
+        {
+            "RECIPE_CD": "R101",
+            "RECIPE_NM": "\ubb34\uac8c \uac80\uc0ac \ucd5c\ub300\uac12",
+            "RECIPE_VALUE": 163.0,
+            "LOWER_LIMIT": 0.0,
+            "UPPER_LIMIT": 0.0
+        },
+        {
+            "RECIPE_CD": "R102",
+            "RECIPE_NM": "\ubc15\uc2a4\uc774\ub3d9 \uc18d\ub3c4",
+            "RECIPE_VALUE": 111000.0,
+            "LOWER_LIMIT": 0.0,
+            "UPPER_LIMIT": 0.0
+        },
+        {
+            "RECIPE_CD": "R103",
+            "RECIPE_NM": "\ucf00\uc774\uc2a4 \uc790\uc7ac\uacf5\uae09 \uc54c\ub78c \uc2dc\uac04 \uc124\uc815",
+            "RECIPE_VALUE": 1000.0,
+            "LOWER_LIMIT": 0.0,
+            "UPPER_LIMIT": 0.0
+        },
+        {
+            "RECIPE_CD": "R104",
+            "RECIPE_NM": "\ucf00\uc774\uc2a4 BCR \uc77d\ub294 \uc2dc\uac04 \uc124\uc815",
+            "RECIPE_VALUE": 1500.0,
+            "LOWER_LIMIT": 0.0,
+            "UPPER_LIMIT": 0.0
+        },
+        {
+            "RECIPE_CD": "R105",
+            "RECIPE_NM": "\ud22c\uc785 \ucee8\ubca0\uc774\uc5b4 \uc815\uc9c0 \uc2dc\uac04 \uc124\uc815",
+            "RECIPE_VALUE": 50.0,
+            "LOWER_LIMIT": 0.0,
+            "UPPER_LIMIT": 0.0
+        },
+        {
+            "RECIPE_CD": "R106",
+            "RECIPE_NM": "\uc88c\uce21 \ub0a0\uac1c \uc811\ub294 \uc2dc\uac04 \uc124\uc815",
+            "RECIPE_VALUE": 20.0,
+            "LOWER_LIMIT": 0.0,
+            "UPPER_LIMIT": 0.0
+        },
+        {
+            "RECIPE_CD": "R107",
+            "RECIPE_NM": "\ub69c\uaed1 1\ucc28 \uc811\ub294 \uc2dc\uac04 \uc124\uc815",
+            "RECIPE_VALUE": 100.0,
+            "LOWER_LIMIT": 0.0,
+            "UPPER_LIMIT": 0.0
+        },
+        {
+            "RECIPE_CD": "R108",
+            "RECIPE_NM": "\ub69c\uaed1 2\ucc28 \uc811\ub294 \uc2dc\uac04 \uc124\uc815",
+            "RECIPE_VALUE": 50.0,
+            "LOWER_LIMIT": 0.0,
+            "UPPER_LIMIT": 0.0
+        },
+        {
+            "RECIPE_CD": "R109",
+            "RECIPE_NM": "\uc591\ud488 & \ubd88\ub7c9 \ucee8\ubca0\uc774\uc5b4 \uc815\uc9c0 \uc2dc\uac04 \uc124\uc815",
+            "RECIPE_VALUE": 50.0,
+            "LOWER_LIMIT": 0.0,
+            "UPPER_LIMIT": 0.0
+        },
+        {
+            "RECIPE_CD": "R110",
+            "RECIPE_NM": "\ubc15\uc2a4 \ubc14\ucf54\ub4dc \ubd88\ub7c9 \ud478\uc154 \ub2e4\uc6b4 \uc2dc\uac04 \uc124\uc815",
+            "RECIPE_VALUE": 10.0,
+            "LOWER_LIMIT": 0.0,
+            "UPPER_LIMIT": 0.0
+        },
+        {
+            "RECIPE_CD": "R111",
+            "RECIPE_NM": "\ubc15\uc2a4 \ubb34\uac8c \uce21\uc815 \uc9c0\uc5f0 \uc2dc\uac04 \uc124\uc815",
+            "RECIPE_VALUE": 10.0,
+            "LOWER_LIMIT": 0.0,
+            "UPPER_LIMIT": 0.0
+        },
+        {
+            "RECIPE_CD": "R112",
+            "RECIPE_NM": "\ub85c\ubd07\uc18d\ub3c4",
+            "RECIPE_VALUE": 444.0,
+            "LOWER_LIMIT": 0.0,
+            "UPPER_LIMIT": 0.0
+        }
+    ],
+    "INSPECT": [
+        {
+            "ISTD_SEQ": "241209011000",
+            "SC_CODE": "CAM1",
+            "STD_SPEC_NOTE": "QR CODE",
+            "STD_EVAL_NOTE": "QR \ucf54\ub4dc \uc5c6\uc74c"
+        },
+        {
+            "ISTD_SEQ": "241209011001",
+            "SC_CODE": "CAM1",
+            "STD_SPEC_NOTE": "QR CODE_E",
+            "STD_EVAL_NOTE": "QR \ucf54\ub4dc \uc5d0\ub7ec"
+        },
+        {
+            "ISTD_SEQ": "241212011035",
+            "SC_CODE": "CAM2",
+            "STD_SPEC_NOTE": "BOX COLOR",
+            "STD_EVAL_NOTE": "\ubc15\uc2a4 \uc0c9\uc0c1 \uc5d0\ub7ec"
+        },
+        {
+            "ISTD_SEQ": "241212011036",
+            "SC_CODE": "CAM2",
+            "STD_SPEC_NOTE": "BOX QR",
+            "STD_EVAL_NOTE": "\ubc15\uc2a4 QR \ucf54\ub4dc \uc5d0\ub7ec"
+        },
+        {
+            "ISTD_SEQ": "241212011037",
+            "SC_CODE": "CAM2",
+            "STD_SPEC_NOTE": "BOX OCR",
+            "STD_EVAL_NOTE": "OCR \uc778\uc2dd \uc5d0\ub7ec"
+        },
+        {
+            "ISTD_SEQ": "241212011038",
+            "SC_CODE": "CAM3",
+            "STD_SPEC_NOTE": "SUB COLOR",
+            "STD_EVAL_NOTE": "\ubd80\uc790\uc7ac \uc0c9\uc0c1 \uc5d0\ub7ec"
+        },
+        {
+            "ISTD_SEQ": "241212011039",
+            "SC_CODE": "CAM3",
+            "STD_SPEC_NOTE": "SUB NOT EXIST",
+            "STD_EVAL_NOTE": "\ubd80\uc790\uc7ac \ud22c\uc785 \uc548\ub428"
+        },
+        {
+            "ISTD_SEQ": "241212011040",
+            "SC_CODE": "CAM4",
+            "STD_SPEC_NOTE": "BOX PACK",
+            "STD_EVAL_NOTE": "\ubc15\uc2a4 \ud3ec\uc7a5 \ubd88\ub7c9"
+        },
+        {
+            "ISTD_SEQ": "241212011041",
+            "SC_CODE": "CAM4",
+            "STD_SPEC_NOTE": "BOX COLOR",
+            "STD_EVAL_NOTE": "\ubc15\uc2a4 \uc0c9\uc0c1 \uc5d0\ub7ec"
+        },
+        {
+            "ISTD_SEQ": "241212011042",
+            "SC_CODE": "CAM4",
+            "STD_SPEC_NOTE": "BOX OCR",
+            "STD_EVAL_NOTE": "OCR \uc778\uc2dd \uc5d0\ub7ec"
+        },
+        {
+            "ISTD_SEQ": "241212011043",
+            "SC_CODE": "CAM4",
+            "STD_SPEC_NOTE": "BOX QR",
+            "STD_EVAL_NOTE": "\ubc15\uc2a4 QR \ucf54\ub4dc \uc5d0\ub7ec"
+        },
+        {
+            "ISTD_SEQ": "250203017935",
+            "SC_CODE": "CAM2",
+            "STD_SPEC_NOTE": "BOX NOT EXIST",
+            "STD_EVAL_NOTE": "\ubc15\uc2a4 \uc5c6\uc74c"
+        }
+    ]
+}

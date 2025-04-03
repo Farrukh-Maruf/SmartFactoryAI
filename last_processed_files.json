@@ -1,0 +1,139 @@
+{
+    "CASE": [
+        {
+            "path": "./saved_frames\\case_task_1_20250328_173051_6ef79df6-2586-4b98-a53c-a8a5488efa69.jpg",
+            "filename": "case_task_1_20250328_173051_6ef79df6-2586-4b98-a53c-a8a5488efa69.jpg",
+            "timestamp": "2025-03-28 17:30:51",
+            "status": "OK",
+            "task_type": "CASE",
+            "details": "OK"
+        },
+        {
+            "path": "./saved_frames\\case_task_1_20250328_173038_cedc07a1-4dee-44ee-9a4d-9b7c2d6ae3bc.jpg",
+            "filename": "case_task_1_20250328_173038_cedc07a1-4dee-44ee-9a4d-9b7c2d6ae3bc.jpg",
+            "timestamp": "2025-03-28 17:30:39",
+            "status": "OK",
+            "task_type": "CASE",
+            "details": "OK"
+        },
+        {
+            "path": "./saved_frames\\case_task_1_20250328_173020_2b087de5-648c-4fd7-a99d-e1749183a612.jpg",
+            "filename": "case_task_1_20250328_173020_2b087de5-648c-4fd7-a99d-e1749183a612.jpg",
+            "timestamp": "2025-03-28 17:30:21",
+            "status": "OK",
+            "task_type": "CASE",
+            "details": "OK"
+        },
+        {
+            "path": "./saved_frames\\case_task_1_20250328_173002_f4178522-cbee-4453-b7ab-9e08b9970e68.jpg",
+            "filename": "case_task_1_20250328_173002_f4178522-cbee-4453-b7ab-9e08b9970e68.jpg",
+            "timestamp": "2025-03-28 17:30:02",
+            "status": "OK",
+            "task_type": "CASE",
+            "details": "OK"
+        }
+    ],
+    "BOX": [
+        {
+            "path": "./saved_frames\\box_task_2_20250314_133136_08a765cd-5c82-4472-9ecc-97b72db4d8b5.jpg",
+            "filename": "box_task_2_20250314_133136_08a765cd-5c82-4472-9ecc-97b72db4d8b5.jpg",
+            "timestamp": "2025-03-14 13:31:38",
+            "status": "OK",
+            "task_type": "BOX",
+            "details": "OK"
+        },
+        {
+            "path": "./saved_frames\\box_task_2_20250314_133118_2363bb7e-dec2-4db2-9f40-2bbbd1ef3ca7.jpg",
+            "filename": "box_task_2_20250314_133118_2363bb7e-dec2-4db2-9f40-2bbbd1ef3ca7.jpg",
+            "timestamp": "2025-03-14 13:31:19",
+            "status": "OK",
+            "task_type": "BOX",
+            "details": "OK"
+        },
+        {
+            "path": "./saved_frames\\box_task_2_20250314_133105_ea481259-be79-47e8-b2ac-11811b61d6bc.jpg",
+            "filename": "box_task_2_20250314_133105_ea481259-be79-47e8-b2ac-11811b61d6bc.jpg",
+            "timestamp": "2025-03-14 13:31:07",
+            "status": "OK",
+            "task_type": "BOX",
+            "details": "OK"
+        },
+        {
+            "path": "./saved_frames\\box_task_2_20250314_133053_0389542b-a9c6-4d77-8fab-a21cac40f40a.jpg",
+            "filename": "box_task_2_20250314_133053_0389542b-a9c6-4d77-8fab-a21cac40f40a.jpg",
+            "timestamp": "2025-03-14 13:30:55",
+            "status": "OK",
+            "task_type": "BOX",
+            "details": "OK"
+        }
+    ],
+    "COVER": [
+        {
+            "path": "./saved_frames\\cover_task_3_20250314_133253_efadb7cc-5119-4d1d-aa27-85546110645e.jpg",
+            "filename": "cover_task_3_20250314_133253_efadb7cc-5119-4d1d-aa27-85546110645e.jpg",
+            "timestamp": "2025-03-14 13:32:53",
+            "status": "OK",
+            "task_type": "COVER",
+            "details": "OK"
+        },
+        {
+            "path": "./saved_frames\\cover_task_3_20250314_133244_499a2039-8ea7-4ff2-9ac3-4fcf3858e6ec.jpg",
+            "filename": "cover_task_3_20250314_133244_499a2039-8ea7-4ff2-9ac3-4fcf3858e6ec.jpg",
+            "timestamp": "2025-03-14 13:32:44",
+            "status": "OK",
+            "task_type": "COVER",
+            "details": "OK"
+        },
+        {
+            "path": "./saved_frames\\cover_task_3_20250314_133236_b2f13e8c-b24c-4d04-bee1-3f97f9cb56d4.jpg",
+            "filename": "cover_task_3_20250314_133236_b2f13e8c-b24c-4d04-bee1-3f97f9cb56d4.jpg",
+            "timestamp": "2025-03-14 13:32:36",
+            "status": "OK",
+            "task_type": "COVER",
+            "details": "OK"
+        },
+        {
+            "path": "./saved_frames\\cover_task_3_20250314_133221_fd906eb4-d8da-41bb-ac1d-7ceb9f374ccf.jpg",
+            "filename": "cover_task_3_20250314_133221_fd906eb4-d8da-41bb-ac1d-7ceb9f374ccf.jpg",
+            "timestamp": "2025-03-14 13:32:21",
+            "status": "OK",
+            "task_type": "COVER",
+            "details": "OK"
+        }
+    ],
+    "FORDING": [
+        {
+            "path": "./saved_frames\\folding_task_1_20250314_133419_561faed0-d3ce-47d2-9b4f-db446d202c21.jpg",
+            "filename": "folding_task_1_20250314_133419_561faed0-d3ce-47d2-9b4f-db446d202c21.jpg",
+            "timestamp": "2025-03-14 13:34:19",
+            "status": "OK",
+            "task_type": "FORDING",
+            "details": "OK"
+        },
+        {
+            "path": "./saved_frames\\folding_task_1_20250314_133354_057c06af-b2f4-45b5-b03b-eb39cd80763f.jpg",
+            "filename": "folding_task_1_20250314_133354_057c06af-b2f4-45b5-b03b-eb39cd80763f.jpg",
+            "timestamp": "2025-03-14 13:33:55",
+            "status": "OK",
+            "task_type": "FORDING",
+            "details": "OK"
+        },
+        {
+            "path": "./saved_frames\\folding_task_1_20250314_133331_c6522cc2-4a7a-44c0-80b2-55458c9d9938.jpg",
+            "filename": "folding_task_1_20250314_133331_c6522cc2-4a7a-44c0-80b2-55458c9d9938.jpg",
+            "timestamp": "2025-03-14 13:33:31",
+            "status": "OK",
+            "task_type": "FORDING",
+            "details": "OK"
+        },
+        {
+            "path": "./saved_frames\\folding_task_1_20250314_133306_52b168b3-aa01-47c7-abfd-0ad4062bec35.jpg",
+            "filename": "folding_task_1_20250314_133306_52b168b3-aa01-47c7-abfd-0ad4062bec35.jpg",
+            "timestamp": "2025-03-14 13:33:06",
+            "status": "OK",
+            "task_type": "FORDING",
+            "details": "OK"
+        }
+    ],
+    "FINAL": []
+}
