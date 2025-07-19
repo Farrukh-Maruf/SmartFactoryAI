@@ -1,0 +1,672 @@
+2025-06-16 11:15:57 - src.core.file_tracker - INFO - Loaded tracked files data from file
+2025-06-16 11:16:07 - src.core.file_tracker - INFO - Starting AI Control System initialization
+2025-06-16 11:16:08 - src.core.file_tracker - INFO - AI Control System initialization completed
+2025-06-16 11:16:09 - src.core.file_tracker - INFO - Starting AI Control System
+2025-06-16 11:16:09 - src.core.file_tracker - INFO - Connecting to RabbitMQ...
+2025-06-16 11:16:10 - src.core.file_tracker - INFO - Declared and bound queue NODERED_TO_AI to exchange NSU_NODERED_FAN
+2025-06-16 11:16:11 - src.core.file_tracker - INFO - Connected to RabbitMQ successfully
+2025-06-16 11:16:11 - src.core.file_tracker - INFO - Started global task worker thread
+2025-06-16 11:16:11 - src.core.file_tracker - INFO - Started global task worker thread
+2025-06-16 11:16:12 - src.core.file_tracker - INFO - Started ping status worker thread
+2025-06-16 11:16:12 - src.core.file_tracker - INFO - Started ping status worker thread
+2025-06-16 11:16:13 - src.core.file_tracker - INFO - Set up consumer for NODERED_TO_AI
+2025-06-16 11:16:14 - src.core.file_tracker - INFO - Waiting for messages. To exit press CTRL+C
+2025-06-16 11:21:41 - src.core.file_tracker - ERROR - Error in ping status worker: HTTPConnectionPool(host='192.168.1.104', port=80): Max retries exceeded with url: /api/ai/ping (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000013E0B7E9CD0>, 'Connection to 192.168.1.104 timed out. (connect timeout=None)'))
+2025-06-16 11:28:00 - src.core.file_tracker - ERROR - Error in ping status worker: HTTPConnectionPool(host='192.168.1.104', port=80): Max retries exceeded with url: /api/ai/ping (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000013E0B7DDD90>, 'Connection to 192.168.1.104 timed out. (connect timeout=None)'))
+2025-06-16 11:28:23 - src.core.file_tracker - ERROR - Error in ping status worker: HTTPConnectionPool(host='192.168.1.104', port=80): Max retries exceeded with url: /api/ai/ping (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000013E0B7B87D0>, 'Connection to 192.168.1.104 timed out. (connect timeout=None)'))
+2025-06-16 11:28:47 - src.core.file_tracker - ERROR - Error in ping status worker: HTTPConnectionPool(host='192.168.1.104', port=80): Max retries exceeded with url: /api/ai/ping (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000013E0B7A4910>, 'Connection to 192.168.1.104 timed out. (connect timeout=None)'))
+2025-06-16 11:29:10 - src.core.file_tracker - ERROR - Error in ping status worker: HTTPConnectionPool(host='192.168.1.104', port=80): Max retries exceeded with url: /api/ai/ping (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000013E0B783DD0>, 'Connection to 192.168.1.104 timed out. (connect timeout=None)'))
+2025-06-16 11:53:27 - src.core.file_tracker - ERROR - Error in ping status worker: HTTPConnectionPool(host='192.168.1.104', port=80): Max retries exceeded with url: /api/ai/ping (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000013E0B7DC210>, 'Connection to 192.168.1.104 timed out. (connect timeout=None)'))
+2025-06-16 12:04:59 - src.core.file_tracker - ERROR - Error in ping status worker: HTTPConnectionPool(host='192.168.1.104', port=80): Max retries exceeded with url: /api/ai/ping (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000013E0B7A5B90>, 'Connection to 192.168.1.104 timed out. (connect timeout=None)'))
+2025-06-16 12:07:48 - src.core.file_tracker - ERROR - Error in ping status worker: HTTPConnectionPool(host='192.168.1.104', port=80): Max retries exceeded with url: /api/ai/ping (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000013E0B7DE5D0>, 'Connection to 192.168.1.104 timed out. (connect timeout=None)'))
+2025-06-16 12:08:29 - src.core.file_tracker - INFO - Received web data: 20250616001
+2025-06-16 12:08:30 - src.core.file_tracker - INFO - Updated order data: 20250616001
+2025-06-16 12:08:30 - src.core.file_tracker - INFO - Order details - Item: BIG, Class: PROD, BOM Count: 3, Recipe Count: 13
+2025-06-16 12:11:09 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:11:09 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:11:10 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:11:10 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:11:11 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:11:11 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:11:17 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_121117_e7bbd286-a655-4904-9409-7a0396bf019e.jpg
+2025-06-16 12:11:18 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:11:18 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_121117_e7bbd286-a655-4904-9409-7a0396bf019e.jpg to tracked files for CASE
+2025-06-16 12:11:19 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_121117_e7bbd286-a655-4904-9409-7a0396bf019e.jpg (507.67 KB) for task CASE
+2025-06-16 12:11:19 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_121117_e7bbd286-a655-4904-9409-7a0396bf019e.jpg for CASE, order: 20250616001
+2025-06-16 12:11:20 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:11:20 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:11:21 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:11:21 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:11:22 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_121122.log
+2025-06-16 12:11:22 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:11:47 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:11:47 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:11:48 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:11:48 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:11:49 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:11:49 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:11:55 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_121155_fdd1e82c-6c23-474f-90a5-e855c75c81ef.jpg
+2025-06-16 12:11:56 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:11:56 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_121155_fdd1e82c-6c23-474f-90a5-e855c75c81ef.jpg to tracked files for CASE
+2025-06-16 12:11:57 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_121155_fdd1e82c-6c23-474f-90a5-e855c75c81ef.jpg (520.41 KB) for task CASE
+2025-06-16 12:11:58 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_121155_fdd1e82c-6c23-474f-90a5-e855c75c81ef.jpg for CASE, order: 20250616001
+2025-06-16 12:11:58 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:11:59 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:11:59 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:12:00 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:12:00 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_121200.log
+2025-06-16 12:12:01 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:12:11 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:12:12 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:12:12 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:12:12 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:12:13 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:12:14 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:12:18 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_121218_39e10e18-bf15-4157-a8be-c1bd90f5afed.jpg
+2025-06-16 12:12:19 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:12:19 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_121218_39e10e18-bf15-4157-a8be-c1bd90f5afed.jpg to tracked files for CASE
+2025-06-16 12:12:20 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_121218_39e10e18-bf15-4157-a8be-c1bd90f5afed.jpg (524.86 KB) for task CASE
+2025-06-16 12:12:21 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_121218_39e10e18-bf15-4157-a8be-c1bd90f5afed.jpg for CASE, order: 20250616001
+2025-06-16 12:12:21 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:12:22 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:12:22 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:12:23 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:12:23 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_121223.log
+2025-06-16 12:12:24 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:12:34 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:12:35 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:12:35 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:12:35 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:12:36 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:12:37 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:12:40 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_121240_0a6ad820-cefc-4045-bce5-e8f459219f55.jpg
+2025-06-16 12:12:41 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:12:42 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_121240_0a6ad820-cefc-4045-bce5-e8f459219f55.jpg to tracked files for CASE
+2025-06-16 12:12:42 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_121240_0a6ad820-cefc-4045-bce5-e8f459219f55.jpg (526.71 KB) for task CASE
+2025-06-16 12:12:43 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_121240_0a6ad820-cefc-4045-bce5-e8f459219f55.jpg for CASE, order: 20250616001
+2025-06-16 12:12:43 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:12:44 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:12:44 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:12:45 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:12:46 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_121245.log
+2025-06-16 12:12:46 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:12:56 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:12:57 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:12:57 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:12:57 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:12:58 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:12:59 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:13:04 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_121303_ad230fe7-4783-43a7-9585-8f6cd90c6660.jpg
+2025-06-16 12:13:04 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:13:05 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_121303_ad230fe7-4783-43a7-9585-8f6cd90c6660.jpg to tracked files for CASE
+2025-06-16 12:13:05 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_121303_ad230fe7-4783-43a7-9585-8f6cd90c6660.jpg (527.57 KB) for task CASE
+2025-06-16 12:13:06 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_121303_ad230fe7-4783-43a7-9585-8f6cd90c6660.jpg for CASE, order: 20250616001
+2025-06-16 12:13:07 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:13:07 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:13:08 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:13:08 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:13:09 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_121309.log
+2025-06-16 12:13:09 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:13:19 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:13:20 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:13:20 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:13:20 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:13:21 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:13:22 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:13:28 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_121328_8f8200fb-8e59-4cb8-b754-0483914b26f8.jpg
+2025-06-16 12:13:29 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:13:29 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_121328_8f8200fb-8e59-4cb8-b754-0483914b26f8.jpg to tracked files for CASE
+2025-06-16 12:13:30 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_121328_8f8200fb-8e59-4cb8-b754-0483914b26f8.jpg (527.44 KB) for task CASE
+2025-06-16 12:13:30 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_121328_8f8200fb-8e59-4cb8-b754-0483914b26f8.jpg for CASE, order: 20250616001
+2025-06-16 12:13:31 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:13:32 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:13:32 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:13:33 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:13:33 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_121333.log
+2025-06-16 12:13:34 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:13:45 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:13:45 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:13:46 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:13:46 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:13:47 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:13:47 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:13:54 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_121354_f2a0052a-50a2-4296-b5d7-ee0f5b99272e.jpg
+2025-06-16 12:13:55 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:13:55 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_121354_f2a0052a-50a2-4296-b5d7-ee0f5b99272e.jpg to tracked files for CASE
+2025-06-16 12:13:56 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_121354_f2a0052a-50a2-4296-b5d7-ee0f5b99272e.jpg (525.18 KB) for task CASE
+2025-06-16 12:13:56 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_121354_f2a0052a-50a2-4296-b5d7-ee0f5b99272e.jpg for CASE, order: 20250616001
+2025-06-16 12:13:57 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:13:57 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:13:58 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:13:58 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:13:59 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_121359.log
+2025-06-16 12:13:59 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:14:10 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:14:10 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:14:11 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:14:11 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:14:12 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:14:12 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:14:20 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_121420_21dfe67c-2795-46bd-ac9e-e57e3f801b66.jpg
+2025-06-16 12:14:21 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:14:21 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_121420_21dfe67c-2795-46bd-ac9e-e57e3f801b66.jpg to tracked files for CASE
+2025-06-16 12:14:22 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_121420_21dfe67c-2795-46bd-ac9e-e57e3f801b66.jpg (513.72 KB) for task CASE
+2025-06-16 12:14:34 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:14:34 - src.core.file_tracker - INFO - Currently processing another task. Task CASE will be queued.
+2025-06-16 12:14:35 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:14:37 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_121420_21dfe67c-2795-46bd-ac9e-e57e3f801b66.jpg for CASE, order: 20250616001
+2025-06-16 12:14:38 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:14:38 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:14:39 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:14:39 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:14:40 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_121440.log
+2025-06-16 12:14:40 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:14:41 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:14:41 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:14:42 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:14:44 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:14:44 - src.core.file_tracker - INFO - Currently processing another task. Task CASE will be queued.
+2025-06-16 12:14:45 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:14:49 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_121449_eecb77a0-7d26-4b36-9f43-a37c6311f785.jpg
+2025-06-16 12:14:49 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:14:50 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_121449_eecb77a0-7d26-4b36-9f43-a37c6311f785.jpg to tracked files for CASE
+2025-06-16 12:14:51 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_121449_eecb77a0-7d26-4b36-9f43-a37c6311f785.jpg (519.20 KB) for task CASE
+2025-06-16 12:14:51 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_121449_eecb77a0-7d26-4b36-9f43-a37c6311f785.jpg for CASE, order: 20250616001
+2025-06-16 12:14:52 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:14:52 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:14:53 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:14:53 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:14:54 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_121454.log
+2025-06-16 12:14:54 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:14:55 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:14:55 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:14:56 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:15:05 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:15:06 - src.core.file_tracker - INFO - Currently processing another task. Task CASE will be queued.
+2025-06-16 12:15:06 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:15:07 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_121507_1a1c2f60-4e52-4f26-941e-ee4c96732e48.jpg
+2025-06-16 12:15:08 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:15:08 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_121507_1a1c2f60-4e52-4f26-941e-ee4c96732e48.jpg to tracked files for CASE
+2025-06-16 12:15:09 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_121507_1a1c2f60-4e52-4f26-941e-ee4c96732e48.jpg (341.52 KB) for task CASE
+2025-06-16 12:15:09 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_121507_1a1c2f60-4e52-4f26-941e-ee4c96732e48.jpg for CASE, order: 20250616001
+2025-06-16 12:15:10 - src.core.file_tracker - INFO - Updated CASE status to ERROR
+2025-06-16 12:15:10 - src.core.file_tracker - ERROR - Task CASE analysis failed with status: NG
+2025-06-16 12:15:11 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'NG', 'ORDER_NO': '20250616001', 'CONFIDENCE': '0%', 'DETAILS': 'Q002'}
+2025-06-16 12:15:11 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'NG', 'ORDER_NO': '20250616001', 'CONFIDENCE': '0%', 'DETAILS': 'Q002'}
+2025-06-16 12:15:12 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'NG', 'ORDER_NO': '20250616001', 'CONFIDENCE': '0%', 'DETAILS': 'Q002'}
+2025-06-16 12:15:12 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_121512.log
+2025-06-16 12:15:13 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:15:13 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:15:14 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:15:14 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:15:22 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:15:23 - src.core.file_tracker - INFO - Currently processing another task. Task CASE will be queued.
+2025-06-16 12:15:23 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:15:24 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_121524_cbb1b56b-e2c8-49fa-8030-4d680592aca9.jpg
+2025-06-16 12:15:25 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:15:26 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_121524_cbb1b56b-e2c8-49fa-8030-4d680592aca9.jpg to tracked files for CASE
+2025-06-16 12:15:26 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_121524_cbb1b56b-e2c8-49fa-8030-4d680592aca9.jpg (513.68 KB) for task CASE
+2025-06-16 12:15:27 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_121524_cbb1b56b-e2c8-49fa-8030-4d680592aca9.jpg for CASE, order: 20250616001
+2025-06-16 12:15:27 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:15:28 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:15:28 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:15:29 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:15:29 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_121529.log
+2025-06-16 12:15:30 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:15:30 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:15:31 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:15:31 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:15:40 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:15:41 - src.core.file_tracker - INFO - Currently processing another task. Task CASE will be queued.
+2025-06-16 12:15:41 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:15:42 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_121542_f808599b-aaa2-4363-959d-c06412dda6fe.jpg
+2025-06-16 12:15:43 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:15:44 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_121542_f808599b-aaa2-4363-959d-c06412dda6fe.jpg to tracked files for CASE
+2025-06-16 12:15:44 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_121542_f808599b-aaa2-4363-959d-c06412dda6fe.jpg (485.83 KB) for task CASE
+2025-06-16 12:15:45 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_121542_f808599b-aaa2-4363-959d-c06412dda6fe.jpg for CASE, order: 20250616001
+2025-06-16 12:15:45 - src.core.file_tracker - INFO - Updated CASE status to ERROR
+2025-06-16 12:15:46 - src.core.file_tracker - ERROR - Task CASE analysis failed with status: NG
+2025-06-16 12:15:46 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'NG', 'ORDER_NO': '20250616001', 'CONFIDENCE': '0%', 'DETAILS': 'Q002'}
+2025-06-16 12:15:47 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'NG', 'ORDER_NO': '20250616001', 'CONFIDENCE': '0%', 'DETAILS': 'Q002'}
+2025-06-16 12:15:47 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'NG', 'ORDER_NO': '20250616001', 'CONFIDENCE': '0%', 'DETAILS': 'Q002'}
+2025-06-16 12:15:48 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_121548.log
+2025-06-16 12:15:48 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:15:49 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:15:49 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:15:50 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:15:57 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:15:58 - src.core.file_tracker - INFO - Currently processing another task. Task CASE will be queued.
+2025-06-16 12:15:58 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:16:01 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_121601_306cb52d-922d-448a-96dd-d73e7040fb8f.jpg
+2025-06-16 12:16:02 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:16:02 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_121601_306cb52d-922d-448a-96dd-d73e7040fb8f.jpg to tracked files for CASE
+2025-06-16 12:16:03 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_121601_306cb52d-922d-448a-96dd-d73e7040fb8f.jpg (517.54 KB) for task CASE
+2025-06-16 12:16:03 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_121601_306cb52d-922d-448a-96dd-d73e7040fb8f.jpg for CASE, order: 20250616001
+2025-06-16 12:16:04 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:16:04 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:16:05 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:16:06 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616001', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:16:06 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_121606.log
+2025-06-16 12:16:07 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:16:07 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:16:08 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:16:08 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:16:19 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_121619_de0ec311-4335-4655-bade-c46e2a153366.jpg
+2025-06-16 12:16:20 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:16:20 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_121619_de0ec311-4335-4655-bade-c46e2a153366.jpg to tracked files for CASE
+2025-06-16 12:16:21 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_121619_de0ec311-4335-4655-bade-c46e2a153366.jpg (285.42 KB) for task CASE
+2025-06-16 12:16:22 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_121619_de0ec311-4335-4655-bade-c46e2a153366.jpg for CASE, order: 20250616001
+2025-06-16 12:16:22 - src.core.file_tracker - INFO - Updated CASE status to ERROR
+2025-06-16 12:16:23 - src.core.file_tracker - ERROR - Task CASE analysis failed with status: NG
+2025-06-16 12:16:23 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'NG', 'ORDER_NO': '20250616001', 'CONFIDENCE': '0%', 'DETAILS': 'Q002'}
+2025-06-16 12:16:24 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'NG', 'ORDER_NO': '20250616001', 'CONFIDENCE': '0%', 'DETAILS': 'Q002'}
+2025-06-16 12:16:24 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'NG', 'ORDER_NO': '20250616001', 'CONFIDENCE': '0%', 'DETAILS': 'Q002'}
+2025-06-16 12:16:25 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_121625.log
+2025-06-16 12:16:25 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:20:56 - src.core.file_tracker - INFO - Received web data: 20250616002
+2025-06-16 12:20:56 - src.core.file_tracker - INFO - Updated order data: 20250616002
+2025-06-16 12:20:57 - src.core.file_tracker - INFO - Order details - Item: BIG, Class: PROD, BOM Count: 3, Recipe Count: 13
+2025-06-16 12:21:29 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:21:29 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:21:30 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:21:30 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:21:31 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:21:31 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:21:33 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_122133_1a522942-2779-4d9e-87c3-51d693b7cb63.jpg
+2025-06-16 12:21:34 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:21:34 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_122133_1a522942-2779-4d9e-87c3-51d693b7cb63.jpg to tracked files for CASE
+2025-06-16 12:21:35 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_122133_1a522942-2779-4d9e-87c3-51d693b7cb63.jpg (527.84 KB) for task CASE
+2025-06-16 12:21:35 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_122133_1a522942-2779-4d9e-87c3-51d693b7cb63.jpg for CASE, order: 20250616002
+2025-06-16 12:21:36 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:21:36 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616002', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:21:37 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616002', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:21:37 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616002', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:21:38 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_122138.log
+2025-06-16 12:21:38 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:22:05 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:22:05 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:22:06 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:22:06 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:22:07 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:22:07 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:22:10 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_122210_166293ad-310b-47c2-85ed-9e567102e5f6.jpg
+2025-06-16 12:22:11 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:22:12 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_122210_166293ad-310b-47c2-85ed-9e567102e5f6.jpg to tracked files for CASE
+2025-06-16 12:22:12 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_122210_166293ad-310b-47c2-85ed-9e567102e5f6.jpg (519.23 KB) for task CASE
+2025-06-16 12:22:13 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_122210_166293ad-310b-47c2-85ed-9e567102e5f6.jpg for CASE, order: 20250616002
+2025-06-16 12:22:13 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:22:14 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616002', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:22:14 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616002', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:22:15 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616002', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:22:15 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_122215.log
+2025-06-16 12:22:16 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:22:27 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:22:28 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:22:28 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:22:28 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:22:29 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:22:30 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:22:37 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_122236_6cc863f9-9909-4783-8c09-3f8d9f8460a4.jpg
+2025-06-16 12:22:37 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:22:38 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_122236_6cc863f9-9909-4783-8c09-3f8d9f8460a4.jpg to tracked files for CASE
+2025-06-16 12:22:38 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_122236_6cc863f9-9909-4783-8c09-3f8d9f8460a4.jpg (531.76 KB) for task CASE
+2025-06-16 12:22:39 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_122236_6cc863f9-9909-4783-8c09-3f8d9f8460a4.jpg for CASE, order: 20250616002
+2025-06-16 12:22:40 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:22:40 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616002', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:22:41 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616002', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:22:41 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616002', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:22:42 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_122242.log
+2025-06-16 12:22:42 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:22:50 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:22:51 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:22:51 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:22:51 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:22:52 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:22:53 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:23:00 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_122300_aba4069f-a5d8-4bfb-9bc6-c2f46a77edeb.jpg
+2025-06-16 12:23:01 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:23:02 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_122300_aba4069f-a5d8-4bfb-9bc6-c2f46a77edeb.jpg to tracked files for CASE
+2025-06-16 12:23:02 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_122300_aba4069f-a5d8-4bfb-9bc6-c2f46a77edeb.jpg (527.94 KB) for task CASE
+2025-06-16 12:23:03 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_122300_aba4069f-a5d8-4bfb-9bc6-c2f46a77edeb.jpg for CASE, order: 20250616002
+2025-06-16 12:23:03 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:23:04 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616002', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:23:04 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616002', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:23:05 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616002', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:23:05 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_122305.log
+2025-06-16 12:23:06 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:23:10 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:23:11 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:23:11 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:23:11 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:23:12 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:23:13 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:23:14 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_122314_dd51a4d0-3d85-46b6-8e1f-98c8d0dfb539.jpg
+2025-06-16 12:23:15 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:23:15 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_122314_dd51a4d0-3d85-46b6-8e1f-98c8d0dfb539.jpg to tracked files for CASE
+2025-06-16 12:23:16 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_122314_dd51a4d0-3d85-46b6-8e1f-98c8d0dfb539.jpg (530.42 KB) for task CASE
+2025-06-16 12:23:16 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_122314_dd51a4d0-3d85-46b6-8e1f-98c8d0dfb539.jpg for CASE, order: 20250616002
+2025-06-16 12:23:17 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:23:17 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616002', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:23:18 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616002', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:23:18 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616002', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:23:19 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_122319.log
+2025-06-16 12:23:19 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:23:30 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:23:31 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:23:32 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:23:32 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:23:33 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:23:33 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:23:41 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_122341_6ec59d91-3d80-4ba7-b28c-5175fae84833.jpg
+2025-06-16 12:23:42 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:23:42 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_122341_6ec59d91-3d80-4ba7-b28c-5175fae84833.jpg to tracked files for CASE
+2025-06-16 12:23:43 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_122341_6ec59d91-3d80-4ba7-b28c-5175fae84833.jpg (528.09 KB) for task CASE
+2025-06-16 12:23:43 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_122341_6ec59d91-3d80-4ba7-b28c-5175fae84833.jpg for CASE, order: 20250616002
+2025-06-16 12:23:44 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:23:44 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616002', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:23:45 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616002', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:23:45 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616002', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:23:46 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_122346.log
+2025-06-16 12:23:46 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:23:48 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:23:48 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:23:49 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:23:49 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:23:50 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:23:50 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:23:54 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_122354_ea8436d5-c4d5-4534-a25a-e9d3bb86cb7f.jpg
+2025-06-16 12:23:55 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:23:55 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_122354_ea8436d5-c4d5-4534-a25a-e9d3bb86cb7f.jpg to tracked files for CASE
+2025-06-16 12:23:56 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_122354_ea8436d5-c4d5-4534-a25a-e9d3bb86cb7f.jpg (516.62 KB) for task CASE
+2025-06-16 12:23:56 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_122354_ea8436d5-c4d5-4534-a25a-e9d3bb86cb7f.jpg for CASE, order: 20250616002
+2025-06-16 12:23:57 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:23:57 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616002', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:23:58 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616002', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:23:58 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616002', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:23:59 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_122359.log
+2025-06-16 12:23:59 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:24:10 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:24:10 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:24:11 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:24:11 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:24:12 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:24:12 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:24:17 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_122417_ccffded0-0aff-4e1a-914c-c5884840b04b.jpg
+2025-06-16 12:24:17 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:24:18 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_122417_ccffded0-0aff-4e1a-914c-c5884840b04b.jpg to tracked files for CASE
+2025-06-16 12:24:19 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_122417_ccffded0-0aff-4e1a-914c-c5884840b04b.jpg (521.34 KB) for task CASE
+2025-06-16 12:24:19 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_122417_ccffded0-0aff-4e1a-914c-c5884840b04b.jpg for CASE, order: 20250616002
+2025-06-16 12:24:20 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:24:20 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616002', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:24:21 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616002', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:24:21 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616002', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:24:22 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_122422.log
+2025-06-16 12:24:22 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:26:59 - src.core.file_tracker - ERROR - Error in ping status worker: HTTPConnectionPool(host='192.168.1.104', port=80): Max retries exceeded with url: /api/ai/ping (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000013E0B822C10>, 'Connection to 192.168.1.104 timed out. (connect timeout=None)'))
+2025-06-16 12:30:41 - src.core.file_tracker - INFO - Received web data: 20250616003
+2025-06-16 12:30:42 - src.core.file_tracker - INFO - Updated order data: 20250616003
+2025-06-16 12:30:42 - src.core.file_tracker - INFO - Order details - Item: BIG, Class: PROD, BOM Count: 3, Recipe Count: 13
+2025-06-16 12:31:11 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:31:12 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:31:12 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:31:12 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:31:13 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:31:14 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:31:20 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_123119_675b746d-acc6-4713-9506-2246dc16a484.jpg
+2025-06-16 12:31:20 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:31:21 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_123119_675b746d-acc6-4713-9506-2246dc16a484.jpg to tracked files for CASE
+2025-06-16 12:31:21 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_123119_675b746d-acc6-4713-9506-2246dc16a484.jpg (531.64 KB) for task CASE
+2025-06-16 12:31:22 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_123119_675b746d-acc6-4713-9506-2246dc16a484.jpg for CASE, order: 20250616003
+2025-06-16 12:31:23 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:31:23 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616003', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:31:24 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616003', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:31:24 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616003', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:31:25 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_123125.log
+2025-06-16 12:31:25 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:31:49 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:31:49 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:31:50 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:31:50 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:31:51 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:31:51 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:31:57 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_123157_90785f11-ff52-45ec-80dd-407274e399f0.jpg
+2025-06-16 12:31:58 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:31:58 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_123157_90785f11-ff52-45ec-80dd-407274e399f0.jpg to tracked files for CASE
+2025-06-16 12:31:59 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_123157_90785f11-ff52-45ec-80dd-407274e399f0.jpg (528.97 KB) for task CASE
+2025-06-16 12:31:59 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_123157_90785f11-ff52-45ec-80dd-407274e399f0.jpg for CASE, order: 20250616003
+2025-06-16 12:32:00 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:32:00 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616003', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:32:01 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616003', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:32:01 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616003', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:32:02 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_123202.log
+2025-06-16 12:32:02 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:32:13 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:32:13 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:32:14 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:32:14 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:32:15 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:32:15 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:32:20 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_123220_e864a89e-fe9d-43f2-9a09-1cf2960acd2b.jpg
+2025-06-16 12:32:21 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:32:21 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_123220_e864a89e-fe9d-43f2-9a09-1cf2960acd2b.jpg to tracked files for CASE
+2025-06-16 12:32:22 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_123220_e864a89e-fe9d-43f2-9a09-1cf2960acd2b.jpg (531.74 KB) for task CASE
+2025-06-16 12:32:22 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_123220_e864a89e-fe9d-43f2-9a09-1cf2960acd2b.jpg for CASE, order: 20250616003
+2025-06-16 12:32:23 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:32:23 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616003', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:32:24 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616003', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:32:24 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616003', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:32:25 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_123225.log
+2025-06-16 12:32:25 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:32:36 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:32:37 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:32:37 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:32:37 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:32:38 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:32:39 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:32:44 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_123244_0521cac4-e09e-406d-9b4b-bb3a902d3bb3.jpg
+2025-06-16 12:32:45 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:32:45 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_123244_0521cac4-e09e-406d-9b4b-bb3a902d3bb3.jpg to tracked files for CASE
+2025-06-16 12:32:46 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_123244_0521cac4-e09e-406d-9b4b-bb3a902d3bb3.jpg (533.20 KB) for task CASE
+2025-06-16 12:32:47 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_123244_0521cac4-e09e-406d-9b4b-bb3a902d3bb3.jpg for CASE, order: 20250616003
+2025-06-16 12:32:47 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:32:48 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616003', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:32:48 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616003', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:32:49 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616003', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:32:49 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_123249.log
+2025-06-16 12:32:50 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:33:00 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:33:01 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:33:01 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:33:01 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:33:02 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:33:03 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:33:05 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_123305_4dfd9809-d274-4dcf-9775-53826cfbdb4f.jpg
+2025-06-16 12:33:06 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:33:06 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_123305_4dfd9809-d274-4dcf-9775-53826cfbdb4f.jpg to tracked files for CASE
+2025-06-16 12:33:07 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_123305_4dfd9809-d274-4dcf-9775-53826cfbdb4f.jpg (534.34 KB) for task CASE
+2025-06-16 12:33:07 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_123305_4dfd9809-d274-4dcf-9775-53826cfbdb4f.jpg for CASE, order: 20250616003
+2025-06-16 12:33:08 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:33:08 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616003', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:33:09 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616003', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:33:09 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616003', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:33:10 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_123310.log
+2025-06-16 12:33:10 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:36:10 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:36:10 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:36:11 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:36:11 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:36:12 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:36:12 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:36:14 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_123614_9950ea2c-8930-4720-960c-10da56a25175.jpg
+2025-06-16 12:36:15 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:36:15 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_123614_9950ea2c-8930-4720-960c-10da56a25175.jpg to tracked files for CASE
+2025-06-16 12:36:16 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_123614_9950ea2c-8930-4720-960c-10da56a25175.jpg (530.92 KB) for task CASE
+2025-06-16 12:36:16 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_123614_9950ea2c-8930-4720-960c-10da56a25175.jpg for CASE, order: 20250616003
+2025-06-16 12:36:17 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:36:17 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616003', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:36:18 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616003', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:36:18 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616003', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:36:19 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_123619.log
+2025-06-16 12:36:19 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:39:35 - src.core.file_tracker - INFO - Received web data: 20250616004
+2025-06-16 12:39:35 - src.core.file_tracker - INFO - Updated order data: 20250616004
+2025-06-16 12:39:36 - src.core.file_tracker - INFO - Order details - Item: SMALL, Class: PROD, BOM Count: 3, Recipe Count: 13
+2025-06-16 12:40:10 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:40:11 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:40:11 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:40:11 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:40:12 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:40:13 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:40:20 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_124020_9d1171e3-9128-4521-ab96-e8a26b2b4d0a.jpg
+2025-06-16 12:40:21 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:40:21 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_124020_9d1171e3-9128-4521-ab96-e8a26b2b4d0a.jpg to tracked files for CASE
+2025-06-16 12:40:22 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_124020_9d1171e3-9128-4521-ab96-e8a26b2b4d0a.jpg (486.73 KB) for task CASE
+2025-06-16 12:40:23 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_124020_9d1171e3-9128-4521-ab96-e8a26b2b4d0a.jpg for CASE, order: 20250616004
+2025-06-16 12:40:23 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:40:24 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616004', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:40:24 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616004', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:40:25 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616004', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:40:25 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_124025.log
+2025-06-16 12:40:26 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:42:45 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:42:46 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:42:47 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:42:47 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:42:48 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:42:48 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:42:55 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_124255_e622c9cc-4121-4ae3-b3b6-6b93c145a20e.jpg
+2025-06-16 12:42:56 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:42:57 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_124255_e622c9cc-4121-4ae3-b3b6-6b93c145a20e.jpg to tracked files for CASE
+2025-06-16 12:42:57 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_124255_e622c9cc-4121-4ae3-b3b6-6b93c145a20e.jpg (488.11 KB) for task CASE
+2025-06-16 12:42:58 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_124255_e622c9cc-4121-4ae3-b3b6-6b93c145a20e.jpg for CASE, order: 20250616004
+2025-06-16 12:42:58 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:42:59 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616004', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:42:59 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616004', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:43:00 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616004', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:43:00 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_124300.log
+2025-06-16 12:43:01 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:43:16 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:43:16 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:43:17 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:43:17 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:43:18 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:43:18 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:43:25 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_124325_9473e5ef-c355-4a1f-b60b-394075f6bcc6.jpg
+2025-06-16 12:43:26 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:43:26 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_124325_9473e5ef-c355-4a1f-b60b-394075f6bcc6.jpg to tracked files for CASE
+2025-06-16 12:43:27 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_124325_9473e5ef-c355-4a1f-b60b-394075f6bcc6.jpg (474.88 KB) for task CASE
+2025-06-16 12:43:27 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_124325_9473e5ef-c355-4a1f-b60b-394075f6bcc6.jpg for CASE, order: 20250616004
+2025-06-16 12:43:28 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:43:28 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616004', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:43:29 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616004', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:43:29 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616004', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:43:30 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_124330.log
+2025-06-16 12:43:30 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:51:10 - src.core.file_tracker - INFO - Received web data: 20250616005
+2025-06-16 12:51:10 - src.core.file_tracker - INFO - Updated order data: 20250616005
+2025-06-16 12:51:11 - src.core.file_tracker - INFO - Order details - Item: BIG, Class: PROD, BOM Count: 3, Recipe Count: 13
+2025-06-16 12:51:35 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:51:35 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:51:36 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:51:36 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:51:37 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:51:38 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:51:42 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_125142_e3e9b02f-532d-4f0f-9530-a8512e4bcd37.jpg
+2025-06-16 12:51:43 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:51:44 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_125142_e3e9b02f-532d-4f0f-9530-a8512e4bcd37.jpg to tracked files for CASE
+2025-06-16 12:51:44 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_125142_e3e9b02f-532d-4f0f-9530-a8512e4bcd37.jpg (507.40 KB) for task CASE
+2025-06-16 12:51:45 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_125142_e3e9b02f-532d-4f0f-9530-a8512e4bcd37.jpg for CASE, order: 20250616005
+2025-06-16 12:51:45 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:51:46 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616005', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:51:46 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616005', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:51:47 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616005', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:51:47 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_125147.log
+2025-06-16 12:51:48 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:52:12 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:52:13 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:52:13 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:52:13 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:52:14 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:52:15 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:52:21 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_125221_84ced360-b422-49b4-bc09-bea306f51644.jpg
+2025-06-16 12:52:22 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:52:23 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_125221_84ced360-b422-49b4-bc09-bea306f51644.jpg to tracked files for CASE
+2025-06-16 12:52:23 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_125221_84ced360-b422-49b4-bc09-bea306f51644.jpg (508.35 KB) for task CASE
+2025-06-16 12:52:24 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_125221_84ced360-b422-49b4-bc09-bea306f51644.jpg for CASE, order: 20250616005
+2025-06-16 12:52:24 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:52:25 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616005', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:52:25 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616005', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:52:26 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616005', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:52:26 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_125226.log
+2025-06-16 12:52:27 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:52:37 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:52:38 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:52:38 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:52:38 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:52:39 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:52:40 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:52:43 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_125243_2d4a5aaa-2b3c-468b-9a3a-30e521c09e7e.jpg
+2025-06-16 12:52:44 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:52:45 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_125243_2d4a5aaa-2b3c-468b-9a3a-30e521c09e7e.jpg to tracked files for CASE
+2025-06-16 12:52:45 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_125243_2d4a5aaa-2b3c-468b-9a3a-30e521c09e7e.jpg (523.16 KB) for task CASE
+2025-06-16 12:52:46 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_125243_2d4a5aaa-2b3c-468b-9a3a-30e521c09e7e.jpg for CASE, order: 20250616005
+2025-06-16 12:52:46 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:52:47 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616005', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:52:47 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616005', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:52:48 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616005', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:52:48 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_125248.log
+2025-06-16 12:52:49 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:56:17 - src.core.file_tracker - INFO - Received web data: 20250616006
+2025-06-16 12:56:18 - src.core.file_tracker - INFO - Updated order data: 20250616006
+2025-06-16 12:56:18 - src.core.file_tracker - INFO - Order details - Item: SMALL, Class: PROD, BOM Count: 3, Recipe Count: 13
+2025-06-16 12:56:48 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:56:49 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:56:49 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:56:49 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:56:50 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:56:51 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:56:55 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_125655_606d4f24-ee0d-4c54-a5ea-a4bb2b1f6793.jpg
+2025-06-16 12:56:55 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:56:56 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_125655_606d4f24-ee0d-4c54-a5ea-a4bb2b1f6793.jpg to tracked files for CASE
+2025-06-16 12:56:56 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_125655_606d4f24-ee0d-4c54-a5ea-a4bb2b1f6793.jpg (472.57 KB) for task CASE
+2025-06-16 12:56:57 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_125655_606d4f24-ee0d-4c54-a5ea-a4bb2b1f6793.jpg for CASE, order: 20250616006
+2025-06-16 12:56:58 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:56:58 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616006', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:56:59 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616006', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:56:59 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616006', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:57:00 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_125700.log
+2025-06-16 12:57:00 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:57:24 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:57:25 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:57:25 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:57:25 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:57:26 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:57:27 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:57:31 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_125731_b93d8e90-2d5d-4a67-9dec-ad0dfb7ec950.jpg
+2025-06-16 12:57:32 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:57:33 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_125731_b93d8e90-2d5d-4a67-9dec-ad0dfb7ec950.jpg to tracked files for CASE
+2025-06-16 12:57:33 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_125731_b93d8e90-2d5d-4a67-9dec-ad0dfb7ec950.jpg (478.88 KB) for task CASE
+2025-06-16 12:57:34 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_125731_b93d8e90-2d5d-4a67-9dec-ad0dfb7ec950.jpg for CASE, order: 20250616006
+2025-06-16 12:57:34 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:57:35 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616006', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:57:35 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616006', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:57:36 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616006', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:57:37 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_125737.log
+2025-06-16 12:57:37 - src.core.file_tracker - INFO - Completed task and ready for next
+2025-06-16 12:57:49 - src.core.file_tracker - INFO - Received task request in NODERED_TO_AI: CASE
+2025-06-16 12:57:49 - src.core.file_tracker - INFO - No tasks currently being processed. Task CASE will start soon.
+2025-06-16 12:57:50 - src.core.file_tracker - INFO - Task CASE added to global processing queue
+2025-06-16 12:57:50 - src.core.file_tracker - INFO - Processing task CASE
+2025-06-16 12:57:51 - src.core.file_tracker - INFO - Updated CASE status to RUNNING
+2025-06-16 12:57:51 - src.core.file_tracker - INFO - Starting task analysis for CASE
+2025-06-16 12:57:57 - src.core.file_tracker - INFO - Saved case_task frame to ./saved_frames\case_task_1_20250616_125757_a6335391-cbc8-4aa1-aa7c-0d3719fefe30.jpg
+2025-06-16 12:57:58 - src.core.file_tracker - INFO - Completed task analysis for CASE
+2025-06-16 12:57:59 - src.core.file_tracker - INFO - Added file ./saved_frames\case_task_1_20250616_125757_a6335391-cbc8-4aa1-aa7c-0d3719fefe30.jpg to tracked files for CASE
+2025-06-16 12:57:59 - src.core.file_tracker - INFO - Uploading IMAGE: ./saved_frames\case_task_1_20250616_125757_a6335391-cbc8-4aa1-aa7c-0d3719fefe30.jpg (469.55 KB) for task CASE
+2025-06-16 12:58:00 - src.core.file_tracker - INFO - Successfully uploaded IMAGE ./saved_frames\case_task_1_20250616_125757_a6335391-cbc8-4aa1-aa7c-0d3719fefe30.jpg for CASE, order: 20250616006
+2025-06-16 12:58:01 - src.core.file_tracker - INFO - Updated CASE status to COMPLETED
+2025-06-16 12:58:01 - src.core.file_tracker - INFO - Task analysis completed: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616006', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:58:02 - src.core.file_tracker - INFO - Sending result to Node-RED: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616006', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:58:02 - src.core.file_tracker - INFO - Results sent to Node-RED successfully: {'NAME': 'CASE', 'RESULT': 'OK', 'ORDER_NO': '20250616006', 'CONFIDENCE': '95%', 'DETAILS': 'OK'}
+2025-06-16 12:58:03 - src.core.file_tracker - INFO - Task result logged to .\TASK_LOGS\2025\06\16\CASE_125803.log
+2025-06-16 12:58:03 - src.core.file_tracker - INFO - Completed task and ready for next
