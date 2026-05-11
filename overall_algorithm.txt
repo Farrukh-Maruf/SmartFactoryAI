@@ -1,0 +1,176 @@
+SmartFactory AI — Full Breakdown (Senior Engineer Explains to Student)
+The Big Idea
+Think of this as a conveyor belt with a brain. A physical product moves through 5 inspection stations. At each station:
+
+A camera takes a picture
+The AI checks if the product is correct
+The result goes back to the factory's control system
+The factory's control system is Node-RED (a visual programming tool used in industrial automation). The AI and Node-RED talk through RabbitMQ (a message queue — like a post office for software).
+
+How a Single Inspection Happens (End-to-End Data Flow)
+
+STEP 1 — Factory triggers inspection
+Node-RED publishes to RabbitMQ:
+    Queue: NODERED_TO_AI
+    Message: {"START": "CASE"}
+
+STEP 2 — AIControlSystem receives it
+    consume_messages() is blocking and waiting
+    → puts {"START": "CASE"} into a thread-safe Queue()
+
+STEP 3 — Worker thread picks it up
+    global_task_worker() (always running in background)
+    → pulls from Queue
+    → acquires processing_lock  ← only ONE task runs at a time
+    → calls process_task_analysis({"START": "CASE"})
+
+STEP 4 — Task analysis runs
+    process_task_analysis() looks up the task:
+        "CASE" → TaskAnalyzer.case_task_analysis()
+
+    case_task_analysis():
+        1. Opens order_data.json → reads expected QR value
+           BOM[2]["ITEM_NM"].split(" ")[1]  e.g., "A3"
+        2. Opens Camera 1 (Vieworks hardware)
+        3. Loop (max 10 seconds):
+              frame = camera.read()         → BGR numpy array
+              qr_text = _read_qr_code(frame) → pyzbar decodes it
+              if qr_text == expected_value:
+                  status = "OK"
+                  break
+        4. Saves frame to saved_frames/CASE_20260511_143022.jpg
+
+STEP 5 — Results go to 3 places simultaneously
+    a) HTTP POST → 192.****   (image file)
+    b) HTTP POST → 192.****  (JSON result)
+    c) Write JSON → TASK_LOGS/2026/05/11/case_143022.log
+
+STEP 6 — Web dashboard updates
+    monitor_task_logs() detects new file in TASK_LOGS/
+    → reads JSON
+    → emits WebSocket event "task_result" to browser
+    → browser shows green OK / red NG with the image
+The 5 Inspection Algorithms Explained
+1. CASE — QR Code Match
+Question asked: "Is this the right case component?"
+
+
+# What to expect comes from the order
+expected = order["BOM"][2]["ITEM_NM"].split(" ")[1]  # e.g., "A3"
+
+# Read QR from camera until match or 10s timeout
+while elapsed < 10:
+    frame = camera.read()
+    qr_text = pyzbar.decode(grayscale(frame))  # decode barcode
+    if qr_text == expected:
+        return OK
+return NG  # timeout
+2. BOX — Three checks at once
+Question asked: "Is the box the right color, right QR, right label?"
+All three must pass:
+
+Color → which channel (R/G/B) has highest average value?
+QR → same as CASE check
+OCR → EasyOCR reads Korean text on label, compares to order
+3. COVER — Color Coverage
+Question asked: "Is enough of the cushion covered with the right color?"
+
+
+# Convert to HSV color space (better for color ranges than BGR)
+hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+
+# Create a mask: 1 where color is yellow, 0 elsewhere
+mask = cv2.inRange(hsv, lower_yellow, upper_yellow)
+
+# What fraction of pixels are yellow?
+coverage = mask.nonzero_pixels / total_pixels
+
+if coverage >= 0.15:  # 15% threshold
+    return OK
+Why HSV instead of RGB? In RGB, "yellow" can be many values depending on lighting. In HSV (Hue, Saturation, Value), "yellow" is always around Hue=30 regardless of brightness. Much more robust for color detection.
+
+4. FOLDING — Machine Learning (YOLOv8)
+Question asked: "Is the folding done correctly?"
+
+
+model = YOLO("src/models/best.pt")  # pre-trained weights
+results = model(frame)              # runs inference
+
+# The model outputs bounding boxes with class labels
+class_name = results[0].names[int(results[0].boxes[0].cls[0])]
+# class_name is either "OK" or "NG"
+This is the only station that uses ML. Someone trained YOLOv8 on photos of good and bad folding, saved the weights as best.pt.
+
+5. FINAL — Just a photo
+No real check. Captures a frame, always returns OK. Used to document the final robot inspection position.
+
+Threading Model — Why It's Designed This Way
+
+┌─────────────────────────────────────────────────────┐
+│ Thread 1 (Main): RabbitMQ consumer                  │
+│   → blocks forever waiting for messages              │
+│   → on message: puts task into Queue()               │
+└─────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────┐
+│ Thread 2: global_task_worker                        │
+│   → loops forever pulling from Queue()              │
+│   → ONE task at a time (processing_lock)            │
+│   → Why? Cameras are shared hardware — you can't    │
+│     run two tasks on the same camera simultaneously │
+└─────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────┐
+│ Thread 3: ping_status_worker                        │
+│   → every 2 seconds: POST to API                    │
+│   → tells the factory server "AI is alive"          │
+└─────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────┐
+│ Flask main thread: web server (port 8080)           │
+│   + 3 background threads watching log files         │
+└─────────────────────────────────────────────────────┘
+Key insight: The Queue() is the buffer. If two tasks arrive while one is running, they wait in the queue. This prevents race conditions on the camera hardware.
+
+Where Does Each Piece of Data Live?
+Data	Where stored	Who writes	Who reads
+Active order	order_data.json	AIControlSystem.process_web_message()	TaskAnalyzer (every task)
+Latest file per station	last_processed_files.json	FileTracker.add_file()	Web UI
+Task results (history)	TASK_LOGS/YYYY/MM/DD/*.log	AIControlSystem.log_task_result()	Web monitor thread
+Captured images	saved_frames/*.jpg	TaskAnalyzer.save_frame()	Web server (/saved_frames/<file>)
+System logs	SYSTEM_LOGS/YYYY/MM/DD/*.log	SystemLogger	Web monitor thread
+Runtime task state	RAM only (task_statuses dict)	AIControlSystem	Ping worker thread
+The Biggest Problems in This Code (Learn From These)
+1. Missing requirements — easyocr, ultralytics, flask, flask-socketio are used but not in requirements.txt. Fresh install will crash. Always verify your deps.
+
+2. LRU cache on numpy arrays — This is a classic Python mistake:
+
+
+@lru_cache  # BROKEN — numpy arrays are not hashable
+def _perform_ocr_cached(self, frame):  # frame is numpy array
+    ...
+lru_cache needs hashable arguments. Numpy arrays will throw TypeError.
+
+3. Async named but sync — A method called save_frame_async() that uses asyncio.new_event_loop() inside a sync function. This is misleading and inefficient. Either go fully async or use ThreadPoolExecutor.
+
+4. Hardcoded IPs in business logic — 192.*** appears directly in ai_control_system.py. When the server moves, you have to hunt through code. All config belongs in .env + settings.py.
+
+5. No tests — Zero unit tests. No way to verify _analyze_color_coverage() without a physical camera.
+
+Summary: The Data Highway
+
+Factory hardware
+    → RabbitMQ → AIControlSystem → Queue → Worker → TaskAnalyzer
+                                                          ↓
+                                               Camera → CV/ML detection
+                                                          ↓
+                                              ┌──────────────────────┐
+                                              │ saved_frames/  (disk)│
+                                              │ TASK_LOGS/     (disk)│
+                                              │ API upload     (HTTP)│
+                                              │ Node-RED       (HTTP)│
+                                              └──────────────────────┘
+                                                          ↓
+                                              Flask watches TASK_LOGS
+                                                          ↓
+                                              WebSocket → Browser UI
